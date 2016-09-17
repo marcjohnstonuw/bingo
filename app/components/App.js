@@ -21,7 +21,7 @@ class App extends React.Component {
 		return (<div>
 			<nav className="navbar navbar-default">
 				<ul className="row">
-					<Link to="/home" activeStyle={{}}><li className="col-sm-4">Home</li></Link>
+					<Link to="/" activeStyle={{}}><li className="col-sm-4">Home</li></Link>
 					<Link to="/games" activeStyle={{}}><li className="col-sm-4">Games</li></Link>
 					<Link to="/templates" activeStyle={{}}><li className="col-sm-4">Templates</li></Link>
 				</ul>
