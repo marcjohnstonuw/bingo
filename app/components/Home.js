@@ -1,9 +1,11 @@
 import React from 'react';
-console.log('home')
+
 class Home extends React.Component {
 	render () {
-		console.log('render')
-		return <div>Hi Mom!</div>;
+		console.log('hello from home')
+		return (
+			<div>Hi Mom!</div>
+		)
 	}
 }
 
