@@ -6,12 +6,13 @@ class GoogleSignIn extends React.Component {
 		this.state = {
 			user: 'emjay'
 		};
+
+		this.onClickSignIn = this.onClickSignIn.bind(this);
 	}
 	onClickSignIn (event) {
 		firebase.auth().signInWithPopup(this.provider).then((result) => {
 			var token = result.credential.accessToken;
 			var user = result.user;
-			debugger;
 			this.setState({user: user})
 		}).catch((error) => {
 			var errorCode = error.code;
@@ -29,8 +30,8 @@ class GoogleSignIn extends React.Component {
 	render () {
 		return (
 			<div>
-				<button onClick={() => this.onClickSignIn()}>SIGN IN</button>
-				{JSON.stringify(this.state.user)}
+				<button onClick={this.onClickSignIn}>SIGN IN</button>
+				{JSON.stringify(this.props.user)}
 			</div>
 		)
 	}

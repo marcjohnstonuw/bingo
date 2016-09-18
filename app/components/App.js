@@ -17,7 +17,6 @@ class App extends React.Component {
 		firebase.initializeApp(config);
 	}
 	render () {
-		console.log('hello from app')
 		return (<div>
 			<nav className="navbar navbar-default">
 				<ul className="row">
